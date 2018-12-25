@@ -30,8 +30,8 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="page-header">
-                <h1>
-                    基于SSM框架的管理系统：简单实现增、删、改、查。
+                <h1 style="text-align: center">
+                    基于SSM框架的日志管理系统
                 </h1>
             </div>
         </div>

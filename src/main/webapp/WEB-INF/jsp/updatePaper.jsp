@@ -26,7 +26,7 @@
                 <div class="col-md-12 column">
                     <div class="page-header">
                         <h1>
-                            基于SSM框架的管理系统：简单实现增、删、改、查。
+                            基于SSM框架的日志管理系统
                         </h1>
                     </div>
                 </div>
@@ -43,16 +43,16 @@
             </div>
 
             <form action="" name="userForm">
-                <input type="hidden" name="paperId" value="${paper.paperId}"/>
-                论文名称：<input type="text" name="paperName" value="${paper.paperName}"/>
-                论文数量：<input type="text" name="paperNum" value="${paper.paperNum}"/>
-                论文详情：<input type="text" name="paperDetail" value="${paper.paperDetail }"/>
+                <input type="hidden" name="logId" value="${log.logId}"/>
+                日志名称：<input type="text" name="logName" value="${log.logName}"/>
+                日志数量：<input type="text" name="logNum" value="${log.logNum}"/>
+                日志详情：<input type="text" name="logDetail" value="${log.logDetail}"/>
                 <input type="button" value="提交" onclick="updatePaper()"/>
             </form>
             <script type="text/javascript">
                 function updatePaper() {
                     var form = document.forms[0];
-                    form.action = "<%=basePath %>paper/updatePaper";
+                    form.action = "<%=basePath %>paper/updateLog";
                     form.method = "post";
                     form.submit();
                 }

@@ -20,8 +20,8 @@
             <div class="row clearfix">
                 <div class="col-md-12 column">
                     <div class="page-header">
-                        <h1>
-                            基于SSM框架的管理系统：简单实现增、删、改、查。
+                        <h1 style="text-align: center">
+                            基于SSM框架的日志管理系统
                         </h1>
                     </div>
                 </div>
@@ -31,14 +31,14 @@
                 <div class="col-md-12 column">
                     <div class="page-header">
                         <h1>
-                            <small>论文列表 —— 显示所有论文</small>
+                            <small>日志列表 —— 显示所有日志</small>
                         </h1>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 column">
-                    <a class="btn btn-primary" href="${path}/paper/toAddPaper">新增</a>
+                    <a class="btn btn-primary" href="${path}/paper/toAddLog">新增</a>
                 </div>
             </div>
             <div class="row clearfix">
@@ -46,23 +46,23 @@
                     <table class="table table-hover table-striped">
                         <thead>
                         <tr>
-                            <th>论文编号</th>
-                            <th>论文名字</th>
-                            <th>论文数量</th>
-                            <th>论文详情</th>
+                            <th>日志编号</th>
+                            <th>日志名字</th>
+                            <th>日志数量</th>
+                            <th>日志描述</th>
                             <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach var="paper" items="${requestScope.get('list')}" varStatus="status">
+                        <c:forEach var="log" items="${requestScope.get('logs')}" varStatus="status">
                             <tr>
-                                <td>${paper.paperId}</td>
-                                <td>${paper.paperName}</td>
-                                <td>${paper.paperNum}</td>
-                                <td>${paper.paperDetail}</td>
+                                <td>${log.logId}</td>
+                                <td>${log.logName}</td>
+                                <td>${log.logNum}</td>
+                                <td>${log.logDetail}</td>
                                 <td>
-                                    <a href="${path}/paper/toUpdatePaper?id=${paper.paperId}">更改</a> |
-                                    <a href="<%=appPath%>/paper/del/${paper.paperId}">删除</a>
+                                    <a href="${path}/paper/toUpdateLog?id=${log.logId}">更改</a> |
+                                    <a href="<%=appPath%>/paper/del/${log.logId}">删除</a>
                                 </td>
                             </tr>
                         </c:forEach>
